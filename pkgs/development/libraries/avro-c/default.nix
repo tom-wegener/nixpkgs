@@ -1,12 +1,12 @@
-{ lib, stdenv, cmake, fetchurl, pkg-config, jansson, snappy, xz, zlib }:
+{ lib, stdenv, cmake, fetchzip, pkg-config, jansson, snappy, xz, zlib }:
 
 stdenv.mkDerivation rec {
   pname = "avro-c";
-  version = "1.11.3";
+  version = "1.12.0";
 
-  src = fetchurl {
+  src = fetchzip {
     url = "mirror://apache/avro/avro-${version}/c/avro-c-${version}.tar.gz";
-    sha256 = "sha256-chfKrPt9XzRhF2ZHOmbC4nm8e/rxuimMfwSzsvulc2U=";
+    sha256 = "sha256-oHh+VDX1GhlNKNK5R/9X5LfjGtpAHDZZSlxgPA99ezU=";
   };
 
   postPatch = ''
